@@ -1,0 +1,25 @@
+<div style="margin-bottom: 10px;
+font-weight: 500;
+text-decoration: underline;">Refill Medicines</div>
+<div *ngIf=" !mbShowMessage">
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Medicine Name</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="Atorva">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Quantity</mat-label>
+            <input matInput placeholder="Ex.1,2..." value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Dosage</mat-label>
+            <input matInput placeholder="Ex.50mg,100mg,500mg..." value="">
+        </mat-form-field>
+    </form>
+
+</div>
+<div *ngIf="mbShowMessage">
+    refill Request submitted successfully to pharmacy.
+</div>
+<div *ngIf="!mbShowMessage"><button mat-button (click)="showMessage()">Submit</button></div>

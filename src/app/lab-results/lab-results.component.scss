@@ -1,0 +1,43 @@
+.labresult-page{
+    height: calc(100vh - 64px);
+    .body-content{
+        padding: 15px;
+        height: 100%;
+        .patient-info{
+            .custom-card {                
+                width: 100%;
+                box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+                border-radius: 6px;
+                border: none;
+                padding: 2rem 1rem;
+                height: 35px;
+                p{
+                    .info-label{
+                        font-weight: 600;
+                        padding-right: 10px;
+                    }
+                    .info-value{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+        .reports-details-grid{
+            table {
+                width: 100%;
+            }
+            .date-block{
+                display: flex;
+                .date-block-list{
+                    padding-right: 15px;
+                }
+            }
+        }
+        .body-header{
+            p{
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+}

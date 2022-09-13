@@ -1,0 +1,131 @@
+<div fxLayout="column" fxFlexFill>
+  <mat-toolbar class="navbar-color mat-elevation-z8 p-0" fxLayout="row" fxLayoutAlign="start stretch" style="z-index: 2">
+    
+    <button *ngIf="enableSideMenu" mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <button mat-button routerLink="/" routerLinkActive="router-link-active">
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px" class="pl-3">
+      <span fxHide fxShow.xs>We Care</span>
+      <span fxHide fxShow.sm>We Care</span>
+      <span fxHide fxShow.md>We Care</span>
+      <span fxHide fxShow.lg>We Care</span>
+      <span fxHide fxShow.xl>We Care</span>
+    </div>
+
+    <span fxFlex></span>
+
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <button mat-button outerLinkActive="router-link-active no-border">
+        <mat-icon>videocam</mat-icon>
+      </button>
+      <button mat-button  routerLinkActive="router-link-active no-border">
+        <mat-icon>email</mat-icon>
+      </button>
+      <button mat-button  routerLinkActive="router-link-active no-border">
+        <mat-icon>chat</mat-icon>
+      </button>
+      <button mat-button  routerLinkActive="router-link-active no-border">
+        <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
+      </button>
+      <button mat-button  routerLinkActive="router-link-active no-border">
+        <!-- <mat-icon>account_circle</mat-icon> -->
+        <div mat-card-avatar class="profile-img"></div>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <mat-drawer-container fxFlex autosize class="background">
+    <mat-drawer #drawer>
+      <div fxLayout="column">
+        <button mat-button routerLink="/dashboard" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">dashboard</mat-icon>Dashboard</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/summary" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">library_books</mat-icon>Medical Summary</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/book" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">event_available</mat-icon>Book an Appointment</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/history" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">history</mat-icon>Booking History</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/labresult" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">science</mat-icon>Lab Results</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/page5" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+          <mat-icon class="mr-2">payment</mat-icon>Payment History</button>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-drawer>
+
+    <!--PAGES-->
+    <div style="display: inline;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+</div>
+
+<!-- option 2 
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>gic</span>
+    </mat-toolbar>
+    Add Content Here 
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- option 1 -->
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>gic</span>
+    </mat-toolbar>
+   
+  </mat-sidenav-content>
+</mat-sidenav-container> -->

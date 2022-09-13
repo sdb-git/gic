@@ -1,0 +1,40 @@
+// .example-form mat-slide-toggle {
+//     margin: 8px 0;
+//     display: block;
+//   }
+
+  .dialog-style {
+      display : flex;
+      flex-direction:  column;
+  }
+
+  .mat-icon {
+      fill : none
+  }
+
+  .optionheader {
+    font-size: medium;
+
+  }
+
+  .closebutton {
+      position:  relative
+  }
+
+  .row {
+    display: flex; flex-direction: row;
+  }
+
+  .date-header {
+    font-size: 12px; font-weight: bold; padding-bottom: 10px;
+  }
+
+  .booked {
+    color: gray;
+    //color: white;
+    background-color: yellow;
+  }
+  .notbooked {
+    background-color : primary;
+    color: white;
+  }

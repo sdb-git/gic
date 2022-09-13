@@ -1,0 +1,467 @@
+<div class="summary">
+    <div class="row">
+        <div class="left-card">
+            <mat-card class="card">
+                <mat-card-actions align="end">
+                    <button mat-button><a href="">Edit |</a></button>
+                    <button mat-button><a href="">view More</a></button>
+                </mat-card-actions>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <div style="font-size: 20px;font-weight: 500">Profile</div>
+
+                </mat-card-header>
+                <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+                <mat-card-content>
+                    <div class="card-grid" style="margin-top: -55px; margin-left: 24px;">
+                        <div class="card-row">
+                            <div class="card-column">Name</div>
+                            <div class="card-column2">{{name}}</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Date of birth</div>
+                            <div class="card-column2">{{date_of_birth}}</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Gender</div>
+                            <div class="card-column2">{{gender}}</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Language</div>
+                            <div class="card-column2">English</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Mobile</div>
+                            <div class="card-column2">+1{{mobile_no}}</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Email</div>
+                            <div class="card-column2" style="color:blue;text-decoration-line: underline;">{{email}}</div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">Address</div>
+                            <div class="card-column2">{{address}}</div>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+                <!--<mat-card-actions align="end">
+                    <button mat-button>Edit</button>
+                    <button mat-button>View More</button>
+                </mat-card-actions>-->
+            </mat-card>
+        </div>
+
+        <div class="right-card">
+
+            <mat-card class="card">
+                <mat-card-actions align="end">
+                    <button mat-button><a href="">Edit |</a></button>
+                    <button mat-button><a href="">view More</a></button>
+                </mat-card-actions>
+                <mat-card-header>
+
+                    <mat-card-title>Health Problems</mat-card-title>
+                </mat-card-header>
+                <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+                <mat-card-content>
+                    <!--<table mat-table [dataSource]="healthProblemsdataSource" class="mat-elevation-z8">
+
+                       
+
+                        
+                        <ng-container matColumnDef="position">
+                            <th mat-header-cell *matHeaderCellDef> No </th>
+                            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+
+                       
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                       
+                        <ng-container matColumnDef="initial finding">
+                            <th mat-header-cell *matHeaderCellDef> Vaccine Given </th>
+                            <td mat-cell *matCellDef="let element"> {{element.inital_finding}} </td>
+                        </ng-container>
+
+                       
+                        <ng-container matColumnDef="related diagnosis">
+                            <th mat-header-cell *matHeaderCellDef> Related Diagnosis</th>
+                            <td mat-cell *matCellDef="let element"> View </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="last tested">
+                            <th mat-header-cell *matHeaderCellDef> Last Tested </th>
+                            <td mat-cell *matCellDef="let element"> {{element.last_tested}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="related medications">
+                            <th mat-header-cell *matHeaderCellDef> Related Medications </th>
+                            <td mat-cell *matCellDef="let element"> View </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumnsHealthProblems"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumnsHealthProblems;"></tr>
+                    </table>-->
+                    <div style="margin-left: 12px;">
+                        <table>
+
+                            <tr>
+                                <th>No.</th>
+                                <th>Name</th>
+                                <th>Initial Finding</th>
+                                <th>Related Diagnosis</th>
+                                <th>Last Tested</th>
+                                <th>Related Medications</th>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Diabetes</td>
+                                <td>01/01/2021</td>
+                                <td><a href="">view</a></td>
+                                <td>01/01/2022</td>
+                                <td><a href="">view</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Thyroid</td>
+                                <td>01/01/2021</td>
+                                <td><a href="">view</a></td>
+                                <td>01/01/2022</td>
+                                <td><a href="">view</a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <br>
+                    <div
+                        style="font-size: 18px ;font-weight:500;margin-left: 18px;margin-bottom: 6px; margin-top: -6px;">
+                        Allergies</div>
+                    <div style="margin-left: 5px;width:50%">
+                        <table>
+
+                            <tr>
+                                <th>No.</th>
+                                <th>Allergen</th>
+                                <th>Symptom</th>
+                                <th>Comment</th>
+
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Pollen</td>
+                                <td>Sneezing</td>
+                                <td style="padding-left: 12px;">By birth </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </mat-card-content>
+
+            </mat-card>
+
+
+        </div>
+    </div>
+    <div class="row2">
+        <div style="margin-left: 40px; width: 92.3%; background-color: white;height:auto;">
+
+            <mat-tab-group>
+                <mat-tab label="Medications">
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;float: left;">
+                        Current Medications :</div>
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;padding-left: 90%;">
+                        <a href="">view all</a></div>
+                    <div class="mat-elevation-z8" >
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                            <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="position">
+                                <th mat-header-cell *matHeaderCellDef> No </th>
+                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            </ng-container>
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="dosage">
+                                <th mat-header-cell *matHeaderCellDef> Dosage/Directions </th>
+                                <td mat-cell *matCellDef="let element"> {{element.dosage}} </td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="start date">
+                                <th mat-header-cell *matHeaderCellDef> Start Date </th>
+                                <td mat-cell *matCellDef="let element"> {{element.start_date}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="stop date">
+                                <th mat-header-cell *matHeaderCellDef> Stop Date </th>
+                                <td mat-cell *matCellDef="let element"> {{element.stop_date}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="prescribed by">
+                                <th mat-header-cell *matHeaderCellDef> Prescribed by </th>
+                                <td mat-cell *matCellDef="let element"> {{element.prescribedBy}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="View/Download">
+                                <th mat-header-cell *matHeaderCellDef> Prescription Note </th>
+                                <!--<td mat-cell *matCellDef="let element"> <a href="/assets/Prescription.png" (click)="openDialog()">view | Download</a> </td>-->
+                                <td mat-cell *matCellDef="let element">
+                                    <span style="color: #0d6efd;text-decoration: underline;cursor: pointer;" (click)="openPdfViewDialog(element['View/Download'])">view |</span>
+                                     <!--<a href="/assets/Prescription.png" target="_blank" >view |</a>-->
+                                     <a [download]="element['name']" [href]="element['View/Download']"> Download</a> </td>
+                            </ng-container>
+                            <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef> Action </th>
+                                <td mat-cell *matCellDef="let element"> <span style="color: #0d6efd;text-decoration: underline;cursor: pointer;" (click)="openRefillDialog()">Refill</span> </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Vaccinations">
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;">
+                        Vaccinations :</div>
+                   <!-- <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;padding-left: 90%;">
+                        <a href="">view all</a></div>-->
+                    <div class="grid">
+                        <table mat-table [dataSource]="dataSourceVaccination" class="mat-elevation-z8">
+
+                            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="position">
+                                <th mat-header-cell *matHeaderCellDef> No </th>
+                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            </ng-container>
+
+                            <!-- for Column -->
+                            <ng-container matColumnDef="for">
+                                <th mat-header-cell *matHeaderCellDef> For </th>
+                                <td mat-cell *matCellDef="let element"> {{element.for}} </td>
+                            </ng-container>
+
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="vaccine given">
+                                <th mat-header-cell *matHeaderCellDef> Vaccine Given </th>
+                                <td mat-cell *matCellDef="let element"> {{element.vaccine_given}} </td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="dose">
+                                <th mat-header-cell *matHeaderCellDef> Dose </th>
+                                <td mat-cell *matCellDef="let element"> {{element.dose}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="date due">
+                                <th mat-header-cell *matHeaderCellDef> Date Due </th>
+                                <td mat-cell *matCellDef="let element"> {{element.date_due}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="date given">
+                                <th mat-header-cell *matHeaderCellDef> Date Given </th>
+                                <td mat-cell *matCellDef="let element"> {{element.date_given}} </td>
+                            </ng-container>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumnsVaccinations"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumnsVaccinations;"></tr>
+                        </table>
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Admission History">
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;">
+                        Admission History :</div>
+                   <!-- <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;padding-left: 90%;">
+                        <a href="">view all</a></div>-->
+                    <div class="grid">
+                        <table mat-table [dataSource]="admissionHistorydataSource" class="mat-elevation-z8">
+
+                            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="position">
+                                <th mat-header-cell *matHeaderCellDef> No </th>
+                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            </ng-container>
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="admission">
+                                <th mat-header-cell *matHeaderCellDef> Admission </th>
+                                <td mat-cell *matCellDef="let element"> {{element.admission}} </td>
+                            </ng-container>
+
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="discharge date">
+                                <th mat-header-cell *matHeaderCellDef> Discharge Date</th>
+                                <td mat-cell *matCellDef="let element"> {{element.discharge_date}} </td>
+                            </ng-container>
+
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="doctor">
+                                <th mat-header-cell *matHeaderCellDef>Doctor</th>
+                                <td mat-cell *matCellDef="let element"> {{element.doctor_name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="primary diagnosis">
+                                <th mat-header-cell *matHeaderCellDef> Primary Diagnosis</th>
+                                <td mat-cell *matCellDef="let element"> {{element.primary_diagnosis}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="treatment">
+                                <th mat-header-cell *matHeaderCellDef> Treatment </th>
+                                <td mat-cell *matCellDef="let element"> {{element.treatment}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="discharge summary">
+                                <th mat-header-cell *matHeaderCellDef> Discharge Summary </th>
+                                <td mat-cell *matCellDef="let element"> <a href="">view | Download</a> </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumnsAdmissionHistory"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumnsAdmissionHistory;"></tr>
+                        </table>
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Outpatient Visits">
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;">
+                        Outpatient visits:</div>
+                    <!--<div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;padding-left: 90%;">
+                        <a href="">view all</a></div>-->
+                        <div class="grid">
+                            <table mat-table [dataSource]="outpatientVisitsdataSource" class="mat-elevation-z8">
+    
+                                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+    
+                                <!-- Position Column -->
+                                <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                </ng-container>
+    
+                                <!-- Name Column -->
+                                <ng-container matColumnDef="admission">
+                                    <th mat-header-cell *matHeaderCellDef> Admission </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.admission}} </td>
+                                </ng-container>
+    
+                                <ng-container matColumnDef="doctor name">
+                                    <th mat-header-cell *matHeaderCellDef>Doctor's Name</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.doctor_name}} </td>
+                                </ng-container>
+    
+                                <ng-container matColumnDef="speciality">
+                                    <th mat-header-cell *matHeaderCellDef> Speciality </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.speciality}} </td>
+                                </ng-container>
+                                
+                                <ng-container matColumnDef="reason">
+                                    <th mat-header-cell *matHeaderCellDef>Reason</th>
+                                    <td mat-cell *matCellDef="let element">{{element.reason}}</td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="prescription note">
+                                    <th mat-header-cell *matHeaderCellDef>Prescription Note</th>
+                                    <td mat-cell *matCellDef="let element"> <a href="">view | Download</a> </td>
+                                </ng-container>
+    
+                                <tr mat-header-row *matHeaderRowDef="displayedColumnsOutpatientVisits"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumnsOutpatientVisits;"></tr>
+                            </table>
+                            <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+                        </div>
+                </mat-tab>
+                <mat-tab label="Vitals">
+                    <div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;">
+                        Vitals :</div>
+                    <!--<div class="tab-title"
+                        style="padding-top: 20px; padding-bottom: 10px;text-decoration-line: underline;background-color:white;padding-left: 90%;">
+                        <a href="">view all</a></div>-->
+                        <div class="grid">
+                            <table mat-table [dataSource]="vitaldataSource" class="mat-elevation-z8">
+    
+                                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+    
+                                <!-- Position Column -->
+                                <ng-container matColumnDef="position">
+                                    <th mat-header-cell *matHeaderCellDef> No </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                                </ng-container>
+    
+                                <!-- Name Column -->
+                                <ng-container matColumnDef="date">
+                                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                                </ng-container>
+    
+                                <ng-container matColumnDef="fasting sugar level">
+                                    <th mat-header-cell *matHeaderCellDef>Fasting Sugar level</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.fasting_sugar_level}} </td>
+                                </ng-container>
+    
+                                <ng-container matColumnDef="pp sugar level">
+                                    <th mat-header-cell *matHeaderCellDef>PP Sugar level</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.pp_sugar_level}} </td>
+                                </ng-container>
+    
+                                <ng-container matColumnDef="bp">
+                                    <th mat-header-cell *matHeaderCellDef>Blood Pressure</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.bp}}  </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="oxygen saturation">
+                                    <th mat-header-cell *matHeaderCellDef>Oxygen Saturation</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.oxygen_saturation}}  </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="heart rate">
+                                    <th mat-header-cell *matHeaderCellDef>Heart Rate</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.heart_rate}}  </td>
+                                </ng-container>
+    
+    
+    
+                                <tr mat-header-row *matHeaderRowDef="displayedColumnsVitals"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumnsVitals;"></tr>
+                            </table>
+                            <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+                        </div>
+                </mat-tab>
+            </mat-tab-group>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</div>

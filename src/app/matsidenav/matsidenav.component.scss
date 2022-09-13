@@ -1,0 +1,42 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+::ng-deep .mat-datepicker-content .mat-calendar {
+  width: 300px!important;
+  height: 300px!important;
+}
+
+
+.md-datepicker-input-container {
+  width: 300px;
+}
+
+::ng-deep.mat-datepicker-content .mat-calendar{
+  width: unset !important;
+  height: unset !important;
+}
+
+.profile-img{
+  
+                background-image: url('/assets/Patient.png');
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+}

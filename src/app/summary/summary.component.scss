@@ -1,0 +1,149 @@
+.summary{
+    //background-color:#b6bfe99c;
+    background-color:#f0f3fb;
+    height:100%;
+    width:100%;
+    .row{
+       // background-color: #b6bfe99c;
+        width:100%;
+        height:50%;
+        .left-card
+        {
+            width:45%;
+          
+            height:50%;
+            float:right;
+            margin-right:1%;
+            margin-left: 3%;
+            margin-top: 2%;
+           
+          
+    
+        }
+        .right-card
+        {
+            
+                width:47%;
+                margin-top: 2%;
+                height:50%;
+                margin-left: 1%;
+                margin-right: 1%;
+                border-top: red,2px ,solid;
+                
+            
+        }
+
+    }
+    .row2{
+        //background-color: #b6bfe99c;
+        width:100%;
+       // height:50%;
+        background-color:#f0f3fb;
+       
+
+
+    }
+
+    .example-header-image {
+       // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-image: url('/assets/Patient.png');
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+      }
+      table {
+        width: 100%;
+      }
+
+      ::ng-deep .mat-tab-group {
+   // background-color: #555151;
+   //background-color: #9DA6DD;
+   background-color: #b6bfe99c;
+   //background-color: #7380CE
+  // background-color: #B9C0E6
+      }
+      
+      ::ng-deep .mat-tab-label .mat-tab-label-content {
+      color:initial;
+      font-size: 18px;
+      font-family: inherit;
+          }
+          
+         
+
+              .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar
+             {
+                 color:white;
+                 height:3px;
+             }
+
+             .mat-header-cell {
+                /* color: rgba(0,0,0,.54); */
+                color: black;
+                font-size: 14px;
+                font-weight: bold;
+                 background-color: #7380ce;
+             }
+
+             .tab-title
+             {
+                padding-top: 20px;
+                padding-bottom: 10px;
+                text-decoration-line: underline;
+                background-color: white;
+                color:black;
+                font-size: 14px;
+                font-weight: 500;
+                padding-left: 20px;
+               // margin-left: 20px;
+             }
+
+             .card-grid
+                {
+                  .card-row{
+                      margin-left: 20%;
+                      .card-column{
+                          float: left;
+                          width: 25%;
+                          font-weight: 500;
+                          font-size: 14px;
+                      }
+                  }
+                }
+                .mat-card-header
+                {
+                    margin-top: -55px;
+                } 
+
+                .mat-card.mat-card.mat-focus-indicator.card
+                {
+                    border-top: 2px;
+                    border-bottom: 0px;
+                    border-left: 0px;
+                    border-right: 0px;
+                    border-color: red;
+                    border-style: solid;
+                }
+
+                th{
+                    font-weight: 500;
+
+                }
+                tr{
+
+                    text-align: center;
+                }
+                .mat-card-actions .mat-button, .mat-card-actions .mat-raised-button, .mat-card-actions .mat-stroked-button
+                {
+                   // background-color:rgba(0, 0, 255, 0.11);
+                    background-color:transparent;
+                    margin-left: -24px;
+                    //margin-top: -4px;
+                }
+                .mat-cell, .mat-footer-cell
+                {
+                    text-align: initial;
+                }
+               
+               
+}

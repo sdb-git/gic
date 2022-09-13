@@ -1,0 +1,48 @@
+<!-- <form class="example-form" #form="ngForm"> -->
+        <div class="dialog-style">
+                <div>
+                        <div class="optionheader"> Options </div>
+                        <hr>
+                        <div style="font-size: 14px; font-weight: bold; padding-bottom: 10px; color : blue"> Available Slots </div>
+                        <div class="date-header"> August 18 2022 </div>
+                        <div>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;"> 3.30 PM </button>
+                        <button mat-raised-button color="primary" [disabled]="'true'" style="margin-right: 20px;"> 5.30 PM </button>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;"> 6.30 PM </button>
+                        </div>
+                        <div style="font-size: 12px; font-weight: bold; padding-bottom: 10px;"> August 19 2022 </div>
+                        <div>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;"> 10.30 AM </button>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;" [ngClass]="isBooked ? 'booked' : 'notbooked'" (click)="onBook()"> 11.30 AM </button>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;"> 2.30 PM </button>
+                        <button mat-raised-button color="primary" style="margin-right: 20px;"> 3.30 PM </button>
+                                <div>
+                                
+                                <button mat-raised-button color="primary" style="margin-right: 20px; margin-top: 10px">4.30 PM </button>
+                                <button mat-raised-button color="primary"style="margin-right: 20px; margin-top: 10px"> 5.30 PM </button>
+                                 </div>    
+                         </div>
+
+                        <!-- <button mat-button class="close-icon" (click)="onSave()" [mat-dialog-close]="true">
+                                <mat-icon>close</mat-icon>
+                        </button> -->
+                        <!-- <button class="closebutton" mat-button (click)="onSave()">  <mat-icon>close</mat-icon> </button> -->
+                </div>
+                <br>
+                <!-- <a href=""> Other Slots </a> -->
+                <mat-slide-toggle ngModel name="chair"> Wheelchair required </mat-slide-toggle>
+                <mat-slide-toggle ngModel name="chair"> Attendant required </mat-slide-toggle>
+                <mat-slide-toggle ngModel name="cab" required> Cab required </mat-slide-toggle>  
+
+               
+
+                <br>
+                <mat-form-field>
+                        <input placeholder="Cab Timings" matInput type="time"> 
+                </mat-form-field>
+               
+                        <!-- <button mat-button (click)="onSave()"> Cancel  <mat-icon>close</mat-icon> </button> -->
+                        <button mat-button (click)="onSave()" routerLink="/history"> Confirm <mat-icon>save</mat-icon> </button>
+               
+        </div>
+<!-- </form> -->

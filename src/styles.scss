@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Add application styles & imports to this file! */
+/* Angular Material */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #f0f3fb;
+}
+
+.navbar-color {background-color: #3f51b5; color: white;}
+.router-link-active {background-color: #b6bfe99c;}
+.no-border {border-radius: 0px;}
+
+.toolbar-color {background-color: #3f51b5; color: white;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.v-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.txt-bold {font-weight: bold;}
+
+.selected {background-color: gainsboro;}
+
+.hello-text {
+  display: flex;
+  float: right;
+  background-image: url('/assets/Patient.png');
+  background-size: cover;
+ }
+
+.page-header{
+  display: flex;
+  float: left;
+      font-size: 16px;
+      font-weight: bold;        
+      margin-left: 50px ;
+}

@@ -1,0 +1,65 @@
+<mat-card style="height: 60px;"> <div class="page-header">Booking History </div> </mat-card>
+<!-- <div class="page-header">
+    <p>
+        <span>              
+            Booking History
+        </span>               
+    </p>              
+</div> -->
+<div class="history-content">
+    
+<mat-tab-group>
+    <mat-tab label="Doctor Appointment">  
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+              <ng-container matColumnDef="bookingId">
+                <th mat-header-cell *matHeaderCellDef> Booking </th>
+                <td mat-cell *matCellDef="let element"> {{element.bookingId}} </td>
+              </ng-container>
+          
+             
+              <ng-container matColumnDef="Hospital">
+                <th mat-header-cell *matHeaderCellDef> Hospital </th>
+                <td mat-cell *matCellDef="let element"> {{element.hospital}} </td>
+              </ng-container>
+          
+             
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Appoinment Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+               <ng-container matColumnDef="doctor">
+                <th mat-header-cell *matHeaderCellDef> Doctor </th>
+                <td mat-cell *matCellDef="let element"> {{element.doctor}} </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+               <ng-container matColumnDef="speciality">
+                <th mat-header-cell *matHeaderCellDef> Speciality </th>
+                <td mat-cell *matCellDef="let element"> {{element.speciality}} </td>
+              </ng-container>
+
+               <!-- Symbol Column -->
+               <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element">   {{element.status}}  </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                           showFirstLastButtons 
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+          </div>
+          
+         
+    
+    </mat-tab>
+    <mat-tab label="Lab Appointment">  Lab Appointment </mat-tab>
+  </mat-tab-group>
+</div>

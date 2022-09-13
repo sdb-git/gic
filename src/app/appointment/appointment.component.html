@@ -1,0 +1,161 @@
+<!-- <mat-calendar [selected]="selectedDate" [startAt]="startAt" [minDate]="minDate" [maxDate]="maxDate"
+        [dateFilter]="myDateFilter" (selectedChange)="onSelect($event)">
+    </mat-calendar> -->
+<!-- <mat-form-field>
+        <input matInput type="datetime-local" placeholder="start date">
+      </mat-form-field> -->
+
+<!-- <ngx-mat-timepicker [(ngModel)]="chosenDate"></ngx-mat-timepicker>  -->
+
+<!-- <ejs-schedule> </ejs-schedule> -->
+
+
+<mat-card style="height: 60px;"> <div class="page-header">Book An Appointment </div>
+    <!-- <div mat-card-avatar class="hello-text"> </div>    -->
+</mat-card>
+
+<div class="option-content">
+    <!-- <div class="row"> -->         
+        <form>
+              
+            <mat-form-field class="search-opt-space" appearance="fill">
+              <mat-label>Speciality</mat-label>
+              <mat-select [(ngModel)]="selectedValue1" name="food">
+                <mat-option *ngFor="let sp of specality" [value]="sp.value">
+                  {{sp.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field> 
+            <mat-form-field class="search-opt-space"appearance="fill">
+                <mat-label>Hospital</mat-label>
+                <mat-select [(ngModel)]="selectedValue2" name="food">
+                  <mat-option *ngFor="let ho of hospital" [value]="ho.value">
+                    {{ho.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> 
+              <mat-form-field appearance="fill">
+                <mat-label>Consultant</mat-label>
+                <mat-select [(ngModel)]="selectedValue3" name="food">
+                  <mat-option *ngFor="let co of consultant" [value]="co.value">
+                    {{co.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>  
+              <button mat-button (click)="onSearch()">  <mat-icon>search</mat-icon>  </button> <span *ngIf="showHistory"> <a  style="margin-bottom: 50px" routerLink="/history" href="">  Booking History </a>   </span>   
+          </form>
+    <!-- </div> -->
+</div>
+
+<div class="schedule-content">
+    <div *ngIf="cardio">
+    <div class="row">      
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <!-- <mat-card-title>Dr Lorie Hersh MD </mat-card-title> -->                   
+                    <mat-card-title> {{ name }} </mat-card-title>
+                    <mat-card-subtitle>Cardiologist</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        New patient appointments. Aso offers video visits.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (bookEvent)="onBookEvent($event)" (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Dr Bora Thomas MD </mat-card-title>
+                    <mat-card-subtitle> Senior Consultant. </mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        Interventional Cardiology. Excellent wait time. Higly recommended.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image3"></div>
+                    <mat-card-title>Dr Stephen Hewitt MD Phd </mat-card-title>
+                    <mat-card-subtitle>Cardiologist</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        Head of cardiology department.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <!-- <br> -->
+        <!-- second row -->
+
+        <div class="row">      
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image4"></div>
+                    <mat-card-title>Dr Marck Chohen MD </mat-card-title>
+                    <mat-card-subtitle>Cardiologist</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        Offers in person and video visits.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image5"></div>
+                    <mat-card-title>Dr Nimish Guja </mat-card-title>
+                    <mat-card-subtitle>Cardiologist</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        Consultant Cardio thoracic surgery.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image6"></div>
+                    <mat-card-title>Dr Anna Gawil MD </mat-card-title>
+                    <mat-card-subtitle>Cardiologist</mat-card-subtitle>
+                </mat-card-header>
+                <!-- <img mat-card-image src="https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?w=2000" alt="Cardiologist"> -->
+                <mat-card-content>
+                    <p>
+                        Surgeon Heart and Lung transpalant.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button (click)="openDialog()">BOOK</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
